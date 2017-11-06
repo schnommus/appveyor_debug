@@ -1,0 +1,14 @@
+version: 1.0.{build}
+branches:
+    except:
+        - archive/*
+        - abandoned/*
+clone_depth: 1
+environment:
+    PATH: "%PATH%;C:\\Program Files\\Git\\cmd"
+    matrix:
+        - PYTHON: "C:\\Python36-x64\\python"
+        - PYTHON: "C:\\Python35-x64\\python"
+build_script: test_setup.bat
+test_script: test.bat
+deploy: off
