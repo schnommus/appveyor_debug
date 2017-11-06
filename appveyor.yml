@@ -12,3 +12,5 @@ environment:
 build_script: test_setup.bat
 test_script: test.bat
 deploy: off
+init:
+  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
